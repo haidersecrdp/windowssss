@@ -3,7 +3,7 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "11"
+      VERSION: "https://iso.biglinux.com.br/biglinux_2026-04-18_k618.iso"
       RAM_SIZE: "12G"
       CPU_CORES: "4"
       USERNAME: "bill"
