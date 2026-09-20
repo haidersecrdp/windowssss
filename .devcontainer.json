@@ -1,6 +1,6 @@
 {
   "name": "Docker Windows RDP",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerComposeFile": "compose.yml",
   "service": "windows",
   "forwardPorts": [3389],
   "portsAttributes": {
