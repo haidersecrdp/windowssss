@@ -1,13 +1,16 @@
 {
-  "name": "Docker Windows RDP",
-  "dockerComposeFile": "compose.yml",
+  "name": "windows",
   "service": "windows",
-  "forwardPorts": [3389],
+  "dockerComposeFile": "compose.yml",
+  "forwardPorts":,
   "portsAttributes": {
+    "8006": {
+      "label": "Web Console",
+      "visibility": "public"
+    },
     "3389": {
       "label": "Windows RDP",
-      "onAutoForward": "notify",
-      "visibility": "public" 
+      "visibility": "public"
     }
   }
 }
