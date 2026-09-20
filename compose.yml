@@ -4,9 +4,9 @@ services:
     image: dockur/windows
     container_name: windows_container
     environment:
-      VERSION: "11"
-      RAM_SIZE: "4G"
-      CPU_CORES: "2"
+      VERSION: "11l"
+      RAM_SIZE: "12G"
+      CPU_CORES: "4"
       # 👇 Yeh dono lines aap ke bataye huwe credentials auto-configure kar dengi
       USERNAME: "Haiderrdp"
       PASSWORD: "Haiderrdp"
