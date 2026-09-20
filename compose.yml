@@ -1,23 +1,20 @@
+version: '3'
 services:
   windows:
-    image: dockurr/windows
-    container_name: windows
+    image: dockur/windows
+    container_name: windows_container
     environment:
-      VERSION: "11l"
-      RAM_SIZE: "12G"
-      CPU_CORES: "4"
-      USERNAME: "bill"
-      PASSWORD: "gates"
+      VERSION: "11"
+      RAM_SIZE: "4G"
+      CPU_CORES: "2"
+      # 👇 Yeh dono lines aap ke bataye huwe credentials auto-configure kar dengi
+      USERNAME: "Haiderrdp"
+      PASSWORD: "Haiderrdp"
+    ports:
+      - "8006:8006"
+      - "3389:3389" # RDP port mapping
     devices:
       - /dev/kvm
-      - /dev/net/tun
     cap_add:
       - NET_ADMIN
-    ports:
-      - 8006:8006
-      - 3389:3389/tcp
-      - 3389:3389/udp
-    volumes:
-      - ./windows:/storage
-    restart: always
-    stop_grace_period: 2m
+    restart: on-failure
